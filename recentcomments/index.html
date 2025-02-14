@@ -183,7 +183,7 @@ setTimeout(() => {
         return
     }
     let ls = []
-    await fetch('https://twikoo-livid-eight.vercel.app/api/comment?type=recent&count=6', {method: 'GET'}).then(async res => res.json())
+    await fetch('waline.orange-blog.top/api/comment?type=recent&count=6', {method: 'GET'}).then(async res => res.json())
         .then(async data => {
             for (const i of data.data) {
                 let title = ''
@@ -252,7 +252,7 @@ setTimeout(() => {
         return
     }
     let ls = []
-    await fetch('https://twikoo-livid-eight.vercel.app/api/comment?type=recent&count=50', {method: 'GET'}).then(async res => res.json())
+    await fetch('waline.orange-blog.top/api/comment?type=recent&count=50', {method: 'GET'}).then(async res => res.json())
         .then(async data => {
             for (const i of data.data) {
                 let title = ''
@@ -326,8 +326,8 @@ utils.addGlobalFn('pjaxSend', () => {
     function initWaline(initFn) {
         const walineOptions = {
             el: '#waline-wrap',
-            serverURL: 'https://twikoo-livid-eight.vercel.app',
-            pageview: true,
+            serverURL: 'waline.orange-blog.top',
+            pageview: false,
             dark: 'html[data-theme="dark"]',
             path: window.location.pathname,
             comment: false,
@@ -354,8 +354,8 @@ utils.addGlobalFn('pjaxSend', () => {
         false && barrageWaline()
     }
 
-    if (true || false) {
-        if (false) utils.loadComment(document.getElementById('waline-wrap'), loadWaline)
+    if (true || true) {
+        if (true) utils.loadComment(document.getElementById('waline-wrap'), loadWaline)
         else loadWaline()
     } else window.loadTwoComment = loadWaline
 })()

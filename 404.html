@@ -183,7 +183,7 @@ setTimeout(() => {
         return
     }
     let ls = []
-    await fetch('https://twikoo-livid-eight.vercel.app/api/comment?type=recent&count=6', {method: 'GET'}).then(async res => res.json())
+    await fetch('waline.orange-blog.top/api/comment?type=recent&count=6', {method: 'GET'}).then(async res => res.json())
         .then(async data => {
             for (const i of data.data) {
                 let title = ''
